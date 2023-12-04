@@ -1,18 +1,31 @@
-numero = int(input("Digite um número entre 1 e 7: "))
+package main
 
-if numero == 1:
-    print("Domingo")
-elif numero == 2:
-    print("Segunda-feira")
-elif numero == 3:
-    print("Terça-feira")
-elif numero == 4:
-    print("Quarta-feira")
-elif numero == 5:
-    print("Quinta-feira")
-elif numero == 6:
-    print("Sexta-feira")
-elif numero == 7:
-    print("Sábado")
-else:
-    print("Número inválido. Por favor, digite um número entre 1 e 7.")
+import (
+	"fmt"
+)
+
+func main() {
+	var diaSemana int
+
+	fmt.Println("Digite um número entre 1 e 7:")
+	fmt.Scan(&diaSemana)
+
+	switch diaSemana {
+	case 1:
+		fmt.Println("Domingo")
+	case 2:
+		fmt.Println("Segunda-feira")
+	case 3:
+		fmt.Println("Terça-feira")
+	case 4:
+		fmt.Println("Quarta-feira")
+	case 5:
+		fmt.Println("Quinta-feira")
+	case 6:
+		fmt.Println("Sexta-feira")
+	case 7:
+		fmt.Println("Sábado")
+	default:
+		fmt.Println("Número inválido. Digite um número entre 1 e 7.")
+	}
+}
