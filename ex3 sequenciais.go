@@ -1,13 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
+	var peso, altura float64
 
-    i := 5
-    if i%2 == 0 {
-        fmt.Println("i é par")
-    } else if i%2 != 0 {
-        fmt.Println("i é ímpar")
-    }
+	fmt.Println("Digite o peso (em kg):")
+	fmt.Scan(&peso)
+
+	fmt.Println("Digite a altura (em metros):")
+	fmt.Scan(&altura)
+
+	imc := peso / (altura * altura)
+
+	fmt.Printf("O IMC é: %.2f\n", imc)
 }
+
