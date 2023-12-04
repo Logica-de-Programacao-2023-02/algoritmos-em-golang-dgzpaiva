@@ -3,15 +3,15 @@ package main
 import "fmt"
 
 func main() {
+	var numero1, numero2, numero3 float64
 
-    peso := 60.
-    altura := 1.70
-    imc := peso / (altura * altura)
-    if imc < 18.5 {
-        fmt.Println("abaixo do peso normal")
-    } else if imc >= 18.5 && imc < 24.9 {
-        fmt.Println("peso normal")
-    } else if imc >= 25 && imc < 29.9 {
-        fmt.Println("Obesidade classe 1")
-    }
+	fmt.Println("Digite três números reais:")
+	fmt.Scan(&numero1, &numero2, &numero3)
+
+	peso1, peso2, peso3 := 2.0, 3.0, 5.0
+
+	somaPesos := peso1 + peso2 + peso3
+	mediaPonderada := (numero1*peso1 + numero2*peso2 + numero3*peso3) / somaPesos
+
+	fmt.Printf("A média ponderada é: %.2f\n", mediaPonderada)
 }
