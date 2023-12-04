@@ -1,29 +1,35 @@
-altura = float(input("Digite a altura (em metros): "))
-sexo = input("Digite o sexo (M para masculino, F para feminino): ")
+package main
 
-if sexo.upper() == 'M':
-    peso_ideal = (72.7 * altura) - 58
-    print(f"O peso ideal para um homem de {altura}m é {peso_ideal:.2f}kg.")
-    
-    peso_atual = float(input("Digite o peso atual (em kg): "))
-    if peso_atual < peso_ideal:
-        print("A pessoa está abaixo do peso ideal.")
-    elif peso_atual > peso_ideal:
-        print("A pessoa está acima do peso ideal.")
-    else:
-        print("A pessoa está no peso ideal.")
-    
-elif sexo.upper() == 'F':
-    peso_ideal = (62.1 * altura) - 44.7
-    print(f"O peso ideal para uma mulher de {altura}m é {peso_ideal:.2f}kg.")
-    
-    peso_atual = float(input("Digite o peso atual (em kg): "))
-    if peso_atual < peso_ideal:
-        print("A pessoa está abaixo do peso ideal.")
-    elif peso_atual > peso_ideal:
-        print("A pessoa está acima do peso ideal.")
-    else:
-        print("A pessoa está no peso ideal.")
-    
-else:
-    print("Sexo não reconhecido. Por favor, digite 'M' para masculino ou 'F' para feminino.")
+import "fmt"
+
+func main() {
+	var altura, pesoIdeal float64
+	var sexo string
+
+	fmt.Println("Digite a altura (em metros):")
+	fmt.Scan(&altura)
+
+	fmt.Println("Digite o sexo (M para masculino ou F para feminino):")
+	fmt.Scan(&sexo)
+
+	if sexo == "M" {
+		pesoIdeal = (72.7 * altura) - 58
+	} else if sexo == "F" {
+		pesoIdeal = (62.1 * altura) - 44.7
+	} else {
+		fmt.Println("Sexo não reconhecido. Use 'M' para masculino ou 'F' para feminino.")
+		return
+	}
+
+	var pesoAtual float64
+	fmt.Println("Digite o peso atual (em kg):")
+	fmt.Scan(&pesoAtual)
+
+	if pesoAtual < pesoIdeal {
+		fmt.Println("A pessoa está abaixo do peso ideal.")
+	} else if pesoAtual > pesoIdeal {
+		fmt.Println("A pessoa está acima do peso ideal.")
+	} else {
+		fmt.Println("A pessoa está dentro do peso ideal.")
+	}
+}
