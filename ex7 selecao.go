@@ -1,8 +1,22 @@
-salario = float(input("Digite o salário do funcionário: "))
+package main
 
-if salario < 1000:
-    novo_salario = salario * 1.10  # Aumento de 10%
-else:
-    novo_salario = salario * 1.05  # Aumento de 5%
+import "fmt"
 
-print(f"O novo salário é: R$ {novo_salario:.2f}")
+func main() {
+	var salario float64
+
+	fmt.Println("Digite o salário do funcionário:")
+	fmt.Scan(&salario)
+
+	var aumento, novoSalario float64
+	if salario < 1000 {
+		aumento = salario * 0.10 // Aumento de 10%
+	} else {
+		aumento = salario * 0.05 // Aumento de 5%
+	}
+
+	novoSalario = salario + aumento
+
+	fmt.Printf("O novo salário é: %.2f\n", novoSalario)
+}
+
