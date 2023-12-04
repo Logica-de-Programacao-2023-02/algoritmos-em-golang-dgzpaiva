@@ -3,15 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	var numero int
+	var salario float64
 
-	fmt.Println("Digite um número inteiro:")
-	fmt.Scan(&numero)
+	fmt.Println("Digite o salário do funcionário:")
+	fmt.Scan(&salario)
 
-	sucessor := numero + 1
-	antecessor := numero - 1
+	var aumento, novoSalario float64
+	if salario < 1000 {
+		aumento = salario * 0.10 // Aumento de 10%
+	} else {
+		aumento = salario * 0.05 // Aumento de 5%
+	}
 
-	fmt.Printf("O número digitado é: %d\n", numero)
-	fmt.Printf("Seu antecessor é: %d\n", antecessor)
-	fmt.Printf("Seu sucessor é: %d\n", sucessor)
-}
+	novoSalario = salario + aumento
+
+	fmt.Printf("O novo salário é: %.2f\n", novoSalario)
