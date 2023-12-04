@@ -1,12 +1,23 @@
-idade = int(input("Digite a idade da pessoa: "))
+package main
 
-if idade < 0:
-    print("Idade inválida. Por favor, digite uma idade válida.")
-elif idade <= 12:
-    print("Criança")
-elif idade <= 18:
-    print("Adolescente")
-elif idade <= 59:
-    print("Adulto")
-else:
-    print("Idoso")
+import "fmt"
+
+func main() {
+	var idade int
+
+	fmt.Println("Digite a idade da pessoa:")
+	fmt.Scan(&idade)
+
+	switch {
+	case idade < 0:
+		fmt.Println("Idade inválida.")
+	case idade <= 12:
+		fmt.Println("Criança")
+	case idade <= 18:
+		fmt.Println("Adolescente")
+	case idade <= 59:
+		fmt.Println("Adulto")
+	default:
+		fmt.Println("Idoso")
+	}
+}
