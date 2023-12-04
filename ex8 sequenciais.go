@@ -1,23 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-    i := 6
-    switch i {
-    case 1:
-        fmt.Println("domingo")
-    case 2:
-        fmt.Println("segunda")
-    case 3:
-        fmt.Println("terça")
-    case 4:
-        fmt.Println("quarta")
-    case 5:
-        fmt.Println("quinta")
-    case 6:
-        fmt.Println("sexta")
-    case 7:
-        fmt.Println("sabado")
-    }
+	var diasTrabalhados int
+	var valorDiaria float64
+
+	fmt.Println("Digite o número de dias trabalhados:")
+	fmt.Scan(&diasTrabalhados)
+
+	fmt.Println("Digite o valor da diária:")
+	fmt.Scan(&valorDiaria)
+
+	salario := float64(diasTrabalhados) * valorDiaria
+
+	fmt.Printf("O salário do funcionário é: R$%.2f\n", salario)
 }
