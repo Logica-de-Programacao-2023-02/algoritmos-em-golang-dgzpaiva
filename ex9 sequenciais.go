@@ -1,16 +1,16 @@
 package main
 
-import (
-    "fmt"
-)
+import "fmt"
 
 func main() {
-    fmt.Print("Digite o preço do produto: ")
-    var preco float64
-    fmt.Scanln(&preco)
+	var precoProduto float64
 
-    desconto := 0.10
-    valorComDesconto := preco * (1 - desconto)
+	fmt.Println("Digite o preço do produto:")
+	fmt.Scan(&precoProduto)
 
-    fmt.Printf("O valor com desconto de 10%% é: %.2f\n", valorComDesconto)
+	desconto := precoProduto * 0.10
+	precoComDesconto := precoProduto - desconto
+
+	fmt.Printf("O preço com desconto de 10%% é: R$%.2f\n", precoComDesconto)
 }
+
