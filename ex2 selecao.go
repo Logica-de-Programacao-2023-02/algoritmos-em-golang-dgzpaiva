@@ -1,13 +1,22 @@
-numero1 = int(input("Digite o primeiro número inteiro: "))
-numero2 = int(input("Digite o segundo número inteiro: "))
-numero3 = int(input("Digite o terceiro número inteiro: "))
+package main
 
-menor_numero = numero1  # Assumindo que o primeiro número é o menor inicialmente
+import "fmt"
 
-if numero2 < menor_numero:
-    menor_numero = numero2
+func main() {
+	var numero1, numero2, numero3 int
 
-if numero3 < menor_numero:
-    menor_numero = numero3
+	fmt.Println("Digite três números inteiros:")
+	fmt.Scan(&numero1, &numero2, &numero3)
 
-print(f"O menor número é: {menor_numero}")
+	menor := numero1
+
+	if numero2 < menor {
+		menor = numero2
+	}
+	if numero3 < menor {
+		menor = numero3
+	}
+
+	fmt.Println("O menor número é:", menor)
+}
+
