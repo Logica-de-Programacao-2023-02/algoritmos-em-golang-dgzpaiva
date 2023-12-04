@@ -1,9 +1,18 @@
-numero1 = int(input("Digite o primeiro número inteiro: "))
-numero2 = int(input("Digite o segundo número inteiro: "))
+package main
 
-if numero1 > 0 and numero2 > 0:
-    resultado = numero1 * numero2
-    print(f"Como ambos são positivos, a multiplicação é: {resultado}")
-else:
-    resultado = numero1 + numero2
-    print(f"Como pelo menos um é negativo, a soma é: {resultado}")
+import "fmt"
+
+func main() {
+	var numero1, numero2 int
+
+	fmt.Println("Digite dois números inteiros:")
+	fmt.Scan(&numero1, &numero2)
+
+	if numero1 > 0 && numero2 > 0 {
+		resultado := numero1 * numero2
+		fmt.Println("Resultado da multiplicação:", resultado)
+	} else {
+		resultado := numero1 + numero2
+		fmt.Println("Resultado da soma:", resultado)
+	}
+}
