@@ -3,11 +3,12 @@ package main
 import "fmt"
 
 func main() {
+	var idadeAnos int
 
-    i := 15
-    if i%3 == 0 && i%5 == 0 {
-        fmt.Println("i é multiplo")
-    } else if i%3 != 0 && i%5 != 0 {
-        fmt.Println("i não é multiplo")
-    }
+	fmt.Println("Digite a idade em anos:")
+	fmt.Scan(&idadeAnos)
+
+	idadeDias := idadeAnos * 365
+
+	fmt.Printf("A idade de %d anos equivale a aproximadamente %d dias.\n", idadeAnos, idadeDias)
 }
