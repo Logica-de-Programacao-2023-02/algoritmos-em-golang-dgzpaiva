@@ -1,9 +1,18 @@
-numero1 = int(input("Digite o primeiro número inteiro: "))
-numero2 = int(input("Digite o segundo número inteiro: "))
+package main
 
-if numero1 > numero2:
-    print(f"O maior número é: {numero1}")
-elif numero2 > numero1:
-    print(f"O maior número é: {numero2}")
-else:
-    print("Os números são iguais.")
+import "fmt"
+
+func main() {
+	var numero1, numero2 int
+
+	fmt.Println("Digite dois números inteiros:")
+	fmt.Scan(&numero1, &numero2)
+
+	if numero1 > numero2 {
+		fmt.Println("O maior número é:", numero1)
+	} else if numero2 > numero1 {
+		fmt.Println("O maior número é:", numero2)
+	} else {
+		fmt.Println("Os números são iguais.")
+	}
+}
